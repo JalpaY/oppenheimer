@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.5 on win32)" generated="20230206 13:36:13.953" rpa="false" schemaversion="3">
+<suite id="s1" name="Oppenheimer-Project-Dev" source="C:\Users\yoges\PycharmProjects\oppenheimer-project-dev">
+<suite id="s1-s1" name="TestCases" source="C:\Users\yoges\PycharmProjects\oppenheimer-project-dev\TestCases">
+<suite id="s1-s1-s1" name="TC1insertdata" source="C:\Users\yoges\PycharmProjects\oppenheimer-project-dev\TestCases\TC1insertdata.robot">
+<test id="s1-s1-s1-t1" name="Upload the file" line="18">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${base_url}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230206 13:36:14.439" level="INFO">Opening browser 'firefox' to base url 'http://localhost:8080/'.</msg>
+<msg timestamp="20230206 13:36:14.439" level="INFO">Firefox driver log is always forced to to: C:\Users\yoges\PycharmProjects\oppenheimer-project-dev\geckodriver-4.log</msg>
+<status status="PASS" starttime="20230206 13:36:14.439" endtime="20230206 13:36:20.763"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230206 13:36:20.763" endtime="20230206 13:36:21.037"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230206 13:36:26.053" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230206 13:36:21.046" endtime="20230206 13:36:26.053"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${refresh_tax_relief}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230206 13:36:26.061" level="INFO">Clicking element '//*[contains(text(),'Refresh Tax Relief Table')]'.</msg>
+<status status="PASS" starttime="20230206 13:36:26.053" endtime="20230206 13:36:26.325"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link:Visit Swagger</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230206 13:36:26.333" level="INFO">Clicking link 'link:Visit Swagger'.</msg>
+<status status="PASS" starttime="20230206 13:36:26.325" endtime="20230206 13:36:26.895"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230206 13:36:31.908" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230206 13:36:26.896" endtime="20230206 13:36:31.908"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${base_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230206 13:36:31.908" level="INFO">Opening url 'http://localhost:8080/'</msg>
+<status status="PASS" starttime="20230206 13:36:31.908" endtime="20230206 13:36:32.464"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,700)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230206 13:36:32.473" level="INFO">Executing JavaScript:
+window.scrollTo(0,700)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230206 13:36:32.464" endtime="20230206 13:36:32.491"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link:Dispense Now</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230206 13:36:32.491" level="INFO">Clicking link 'link:Dispense Now'.</msg>
+<status status="PASS" starttime="20230206 13:36:32.491" endtime="20230206 13:36:33.167"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230206 13:36:38.169" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230206 13:36:33.167" endtime="20230206 13:36:38.169"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<arg>${text_dispensed}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230206 13:36:38.169" endtime="20230206 13:36:38.179"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${base_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230206 13:36:38.189" level="INFO">Opening url 'http://localhost:8080/'</msg>
+<status status="PASS" starttime="20230206 13:36:38.189" endtime="20230206 13:36:38.449"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230206 13:36:38.449" endtime="20230206 13:36:41.373"/>
+</kw>
+<status status="PASS" starttime="20230206 13:36:14.437" endtime="20230206 13:36:41.373"/>
+</test>
+<status status="PASS" starttime="20230206 13:36:14.015" endtime="20230206 13:36:41.388"/>
+</suite>
+<status status="PASS" starttime="20230206 13:36:14.015" endtime="20230206 13:36:41.388"/>
+</suite>
+<status status="PASS" starttime="20230206 13:36:13.953" endtime="20230206 13:36:41.388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Oppenheimer-Project-Dev">Oppenheimer-Project-Dev</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCases">Oppenheimer-Project-Dev.TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TC1insertdata">Oppenheimer-Project-Dev.TestCases.TC1insertdata</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
