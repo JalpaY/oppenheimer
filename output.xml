@@ -1,92 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.5 on win32)" generated="20230206 13:36:13.953" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.5 on win32)" generated="20230209 14:20:48.348" rpa="false" schemaversion="3">
 <suite id="s1" name="Oppenheimer-Project-Dev" source="C:\Users\yoges\PycharmProjects\oppenheimer-project-dev">
 <suite id="s1-s1" name="TestCases" source="C:\Users\yoges\PycharmProjects\oppenheimer-project-dev\TestCases">
-<suite id="s1-s1-s1" name="TC1insertdata" source="C:\Users\yoges\PycharmProjects\oppenheimer-project-dev\TestCases\TC1insertdata.robot">
-<test id="s1-s1-s1-t1" name="Upload the file" line="18">
+<suite id="s1-s1-s1" name="TC3Calculator controller" source="C:\Users\yoges\PycharmProjects\oppenheimer-project-dev\TestCases\TC3Calculator_controller.robot">
+<test id="s1-s1-s1-t1" name="Check Calculatorcontroller" line="13">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${base_url}</arg>
+<arg>${base_url1}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230206 13:36:14.439" level="INFO">Opening browser 'firefox' to base url 'http://localhost:8080/'.</msg>
-<msg timestamp="20230206 13:36:14.439" level="INFO">Firefox driver log is always forced to to: C:\Users\yoges\PycharmProjects\oppenheimer-project-dev\geckodriver-4.log</msg>
-<status status="PASS" starttime="20230206 13:36:14.439" endtime="20230206 13:36:20.763"/>
+<msg timestamp="20230209 14:20:48.842" level="INFO">Opening browser 'firefox' to base url 'http://localhost:8080/swagger-ui.html'.</msg>
+<msg timestamp="20230209 14:20:48.845" level="INFO">Firefox driver log is always forced to to: C:\Users\yoges\PycharmProjects\oppenheimer-project-dev\geckodriver-27.log</msg>
+<status status="PASS" starttime="20230209 14:20:48.840" endtime="20230209 14:20:55.066"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230206 13:36:20.763" endtime="20230206 13:36:21.037"/>
+<status status="PASS" starttime="20230209 14:20:55.069" endtime="20230209 14:20:55.455"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230206 13:36:26.053" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230206 13:36:21.046" endtime="20230206 13:36:26.053"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${refresh_tax_relief}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230206 13:36:26.061" level="INFO">Clicking element '//*[contains(text(),'Refresh Tax Relief Table')]'.</msg>
-<status status="PASS" starttime="20230206 13:36:26.053" endtime="20230206 13:36:26.325"/>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230209 14:20:55.456" endtime="20230209 14:20:55.457"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
-<arg>link:Visit Swagger</arg>
+<arg>calculator-controller</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230206 13:36:26.333" level="INFO">Clicking link 'link:Visit Swagger'.</msg>
-<status status="PASS" starttime="20230206 13:36:26.325" endtime="20230206 13:36:26.895"/>
+<msg timestamp="20230209 14:20:55.464" level="INFO">Clicking link 'calculator-controller'.</msg>
+<status status="PASS" starttime="20230209 14:20:55.458" endtime="20230209 14:21:10.788"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230206 13:36:31.908" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230206 13:36:26.896" endtime="20230206 13:36:31.908"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${post_calculator_insert}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 14:21:10.790" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']'.</msg>
+<status status="PASS" starttime="20230209 14:21:10.789" endtime="20230209 14:21:21.100"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${base_url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230206 13:36:31.908" level="INFO">Opening url 'http://localhost:8080/'</msg>
-<status status="PASS" starttime="20230206 13:36:31.908" endtime="20230206 13:36:32.464"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_Try_it}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 14:21:21.102" level="INFO">Clicking element '//button[@class='btn try-out__btn']'.</msg>
+<status status="PASS" starttime="20230209 14:21:21.101" endtime="20230209 14:21:31.362"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230209 14:21:31.364" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230209 14:21:31.363" endtime="20230209 14:21:36.380"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${text_area}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230209 14:21:36.382" endtime="20230209 14:21:46.446"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${text_area}</arg>
+<arg>birthday:02/12/1982,gender:female,name:Lily,natid:001,salary:$40000,tax:$1300</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230209 14:21:46.449" level="INFO">Typing text 'birthday:02/12/1982,gender:female,name:Lily,natid:001,salary:$40000,tax:$1300' into text field '//textarea[@class='body-param__text']'.</msg>
+<status status="PASS" starttime="20230209 14:21:46.447" endtime="20230209 14:22:02.130"/>
 </kw>
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>window.scrollTo(0,700)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230206 13:36:32.473" level="INFO">Executing JavaScript:
+<msg timestamp="20230209 14:22:02.132" level="INFO">Executing JavaScript:
 window.scrollTo(0,700)
 Without any arguments.</msg>
-<status status="PASS" starttime="20230206 13:36:32.464" endtime="20230206 13:36:32.491"/>
+<status status="PASS" starttime="20230209 14:22:02.131" endtime="20230209 14:22:07.145"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>link:Dispense Now</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230206 13:36:32.491" level="INFO">Clicking link 'link:Dispense Now'.</msg>
-<status status="PASS" starttime="20230206 13:36:32.491" endtime="20230206 13:36:33.167"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='btn execute opblock-control__btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 14:22:07.148" level="INFO">Clicking element '//button[@class='btn execute opblock-control__btn']'.</msg>
+<status status="PASS" starttime="20230209 14:22:07.146" endtime="20230209 14:22:17.455"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230206 13:36:38.169" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230206 13:36:33.167" endtime="20230206 13:36:38.169"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,300)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230209 14:22:17.457" level="INFO">Executing JavaScript:
+window.scrollTo(0,300)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230209 14:22:17.456" endtime="20230209 14:22:22.473"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<arg>${text_dispensed}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20230206 13:36:38.169" endtime="20230206 13:36:38.179"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>//textarea[contains(text(),'curl -X POST "http://localhost:8080/calculator/ins')]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230209 14:22:22.474" endtime="20230209 14:22:22.474"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${base_url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230206 13:36:38.189" level="INFO">Opening url 'http://localhost:8080/'</msg>
-<status status="PASS" starttime="20230206 13:36:38.189" endtime="20230206 13:36:38.449"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(900,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230209 14:22:22.476" level="INFO">Executing JavaScript:
+window.scrollTo(900,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230209 14:22:22.475" endtime="20230209 14:22:27.484"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='btn try-out__btn cancel']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 14:22:27.486" level="INFO">Clicking element '//button[@class='btn try-out__btn cancel']'.</msg>
+<status status="PASS" starttime="20230209 14:22:27.485" endtime="20230209 14:22:37.723"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${post_calculator_insert}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230209 14:22:37.725" level="INFO">Clicking element '//div[@id='operations-calculator-controller-insertPersonUsingPOST_1']'.</msg>
+<status status="PASS" starttime="20230209 14:22:37.724" endtime="20230209 14:22:48.449"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230206 13:36:38.449" endtime="20230206 13:36:41.373"/>
+<status status="PASS" starttime="20230209 14:22:48.450" endtime="20230209 14:22:56.270"/>
 </kw>
-<status status="PASS" starttime="20230206 13:36:14.437" endtime="20230206 13:36:41.373"/>
+<doc>Testing insert data functions</doc>
+<status status="PASS" starttime="20230209 14:20:48.838" endtime="20230209 14:22:56.271"/>
 </test>
-<status status="PASS" starttime="20230206 13:36:14.015" endtime="20230206 13:36:41.388"/>
+<status status="PASS" starttime="20230209 14:20:48.411" endtime="20230209 14:22:56.274"/>
 </suite>
-<status status="PASS" starttime="20230206 13:36:14.015" endtime="20230206 13:36:41.388"/>
+<status status="PASS" starttime="20230209 14:20:48.407" endtime="20230209 14:22:56.277"/>
 </suite>
-<status status="PASS" starttime="20230206 13:36:13.953" endtime="20230206 13:36:41.388"/>
+<status status="PASS" starttime="20230209 14:20:48.354" endtime="20230209 14:22:56.280"/>
 </suite>
 <statistics>
 <total>
@@ -97,7 +127,7 @@ Without any arguments.</msg>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Oppenheimer-Project-Dev">Oppenheimer-Project-Dev</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCases">Oppenheimer-Project-Dev.TestCases</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TC1insertdata">Oppenheimer-Project-Dev.TestCases.TC1insertdata</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TC3Calculator controller">Oppenheimer-Project-Dev.TestCases.TC3Calculator controller</stat>
 </suite>
 </statistics>
 <errors>

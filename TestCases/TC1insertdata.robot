@@ -5,26 +5,28 @@ Library      SeleniumLibrary
 
 *** Variables ***
 ${base_url}   http://localhost:8080/
-#${upload_file}  //input[@type='file']
 ${refresh_tax_relief}  //*[contains(text(),'Refresh Tax Relief Table')]
-#${Verify_Upload}  //div[@id='contents']
 ${file_to_upload}  data.csv
 ${text_dispensed}   //div[contains(text(),'Cash dispensed')]
 
 
 *** Test Cases ***
-
 Upload the file
+   [Documentation]    Testing localhost 8080 page functionality
    Open Browser    ${base_url}
    Maximize Browser Window
    Sleep  5
-   #Choose File    ${upload_file}  ${CURDIR}${/}${file_to_upload}
-   #Wait Until Element Is Visible    [normalize-space()="C://Users//yoges//Downloads//${file_to_upload}
+#click to refresh tax relief button
    Click Element    ${refresh_tax_relief}
+   sleep  3
+#click to visit swagger button
    Click Link    link:Visit Swagger
    Sleep    5
+#back to main URL
    Go To    ${base_url}
+#scrolling window
    Execute Javascript    window.scrollTo(0,700)
+#click to link Dispense Now
    Click Link    link:Dispense Now
    Sleep    5
    Get Text    ${text_dispensed}
