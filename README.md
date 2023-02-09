@@ -1,22 +1,77 @@
-# The Oppenheimer Project 
-As part of the policy to increase taxation relief to its working class hero affected by the Novel Coronavirus Infection, the governer of the City of Carson has called for an immediate a cut to all IT services budget. This includes terminating **all** applications hosted on cloud providers, include the one which you were tasked to work on.
+TC-1 Upload file 
+*** Settings ***
+import Library
+*** Variables ***
+Declaration of variable which can reuse
+*** Test Cases ***
+Upload file
+    Open Browser To Web page (http://localhost:8080/)
+    maximize window
+    click Tax relief refresh button
+    click to visit swager link
+    back to main page
+    scroll down windows
+    click to dispense now
+    get text of  Cash dispensed 
+    Close Browser
+    
+    ________________________________________________________________________________________
+    
+TC-2 Check basicErrorController
+*** Settings ***
+import Library
+*** Variables ***
+Declaration of variable which can reuse
+*** Test Cases ***
+Check basicErrorControllerGET
+    Open Browser To Web page (http://localhost:8080/swagger-ui.html)
+    maximize window
+    click link basic error controller
+    click to GET basic error conroller
+    click TryitOut
+    click Excute
+    scroll window down
+    Get curl text
+    Scroll up window
+    click cancel 
+    Click head basic controller
+    click try it out
+    click excute button
+    scroll down window
+    Click clear button
+    click cancel button
+    click link to head basic conroller
+    click basic error conroller
+    close browser
+    
+    ------------------------------------------------------------------------------------
+TC-3 Check CalculatorController
+*** Settings ***
+import Library
+*** Variables ***
+Declaration of variable which can reuse
+*** Test Cases ***
+Testing insert data functions 
+    Open Browser To Web page (http://localhost:8080/swagger-ui.html)
+    maximize window
+    click link to calculatore controller
+    click post insert calculator
+    click button try it
+    scroll down window
+    click to (Example value) text area
+    remove text from example value text area
+    insert data in example value text area
+    scroll down window
+    click excute
+    log text in console from curl
+    scroll up window
+    click to cancel button
+    click link post calcularor insert
+    close browser
+    
 
-Fear not... The development team has provided you with the Dev environment in the form of a `jar` file to assist you on your task.
-
-## To proceed further:
-
-##### 1. Download and clone this repository to your desktop. You may also choose to download the jar `OppenheimerProjectDev.jar`  
-##### 2. To run the application, issue the following to your terminal. Replace `{path-to-this-jar}` with your actual path to the folder containing the jar 
-```
-java -jar {path-to-this-jar}/OppenheimerProjectDev.jar
-```
-
-##### 3. Give it a min or two to boot up and you should be able to visit the app and API interface here:
-```
-http://localhost:8080/
-http://localhost:8080/swagger-ui.html
-```
-
-##### 4. Good luck and have fun
-
-_Note that should you encounter any problems or have any questions, please do not hesitate to contact us for assistance =)_ 
+    
+    
+    
+    
+    
